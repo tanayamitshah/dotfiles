@@ -29,5 +29,7 @@ else
   mkdir -p "$TARGET"
   eval "$CMD"
 
-  echo "" >> $HOME/.bashrc && cat "$TARGET/.bashrc" >> $HOME/.bashrc
+  # TODO (tshah, 20240629): 
+  # Make this work for the original terminal in the devcontainer.
+  echo "source $TARGET/.bashrc" >> $HOME/.bashrc
 fi
